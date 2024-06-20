@@ -108,7 +108,9 @@
             map.addControl(
                 new MapboxGeocoder({
                     accessToken: mapboxgl.accessToken,
-                    mapboxgl: mapboxgl
+                    mapboxgl: mapboxgl,
+                    zoom:14,
+                    placeholder: 'San Diego, California, United States'
                 })
             );
 
