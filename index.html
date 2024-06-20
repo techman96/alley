@@ -41,7 +41,7 @@
 
         map.on('load', () => {
 
-            map.loadImage('last4.png', (error, image) => {
+            map.loadImage('last5.png', (error, image) => {
                 if (error) throw error;
                 map.addImage('pin', image);
             })
@@ -60,7 +60,8 @@
             'layout': {
                 'icon-image': 'pin',
                 // 'icon-overlap': 'always',
-                'icon-size': 0.009
+                'icon-size':['interpolate', ['exponential', 2], ['zoom'], 15, 0.2, 23, 5]
+
             }
             });
 
